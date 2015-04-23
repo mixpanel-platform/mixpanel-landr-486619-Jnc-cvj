@@ -88,6 +88,7 @@
           for(i = 0; i < firstKeys.length; i++){
             var keyKeys = Object.keys(results[firstKeys[i]]);
             for(j = 0; j < keyKeys.length; j++){
+              console.log(keyKeys[j]);
               if (keyKeys[j] != "$overall"){
                 var dates = Object.keys(results[firstKeys[i]][keyKeys[j]]);
                 var name = propKeys[i] + " / " + keyKeys[j];
