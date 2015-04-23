@@ -97,7 +97,7 @@
                 newResults[name] = 0;
                 for(k = 0; k<dates.length; k++){
                  firstStep += results[firstKeys[i]][keyKeys[j]][dates[k]][0]['count'];
-                 finalStep += results[firstKeys[i]][keyKeys[j]][dates[k]][1]['count'];
+                 finalStep += results[firstKeys[i]][keyKeys[j]][dates[k]][eventsNum - 1]['count'];
                 }
                 console.log(firstStep);
                 console.log(finalStep);
