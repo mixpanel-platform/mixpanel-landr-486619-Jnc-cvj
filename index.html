@@ -80,6 +80,7 @@
         }
         
         var finishResults = function(results, newResults, from, propKeys) {
+          console.log(results);
           var firstKeys = Object.keys(results);
           for(i = 0; i < firstKeys.length; i++){
             var keyKeys = Object.keys(results[firstKeys[i]]);
