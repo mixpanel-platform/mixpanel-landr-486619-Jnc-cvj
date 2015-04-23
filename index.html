@@ -69,9 +69,11 @@
         var processResults = function(results, newResults, from, propKeys){
           var promiselist = [];
           params['segment'] = 'Partner';
-          for(var i = 0; i < propKeys.length - 1; i++){
-            params['where'] = 'properties["Application"] == "' + propKeys[i] + '"';
-            promiselist.push(MP.api.funnel("Signed Up", "Mastered Track", params));
+          for(var i = 0; i < propKeys.length; i++){
+            if(propKeys[i]!='$overall' && propKeys[i]!='undefined') {
+              params['where'] = 'properties["Application"] == "' + propKeys[i] + '"';
+              promiselist.push(MP.api.funnel("Signed Up", "Mastered Track", params));
+            }
           }
           
           Promise.all(promiselist).then(function(promiseArray){
