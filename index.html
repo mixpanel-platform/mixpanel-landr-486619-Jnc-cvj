@@ -98,6 +98,8 @@
                  firstStep += results[firstKeys[i]][keyKeys[j]][dates[k]][0]['count'];
                  finalStep += results[firstKeys[i]][keyKeys[j]][dates[k]][eventsNum - 1]['count'];
                 }
+                console.log(firstStep);
+                console.log(finalStep);
                 if(firstStep > 0) {
                   newResults[name] = (finalStep / firstStep) * 100;
                 }
